@@ -7,9 +7,11 @@
     </div>
   </div>
 </template>
+
 <script lang="ts">
-import Topnav from '../components/Topnav'
+import Topnav from '../components/Topnav';
+
 export default {
   components: {Topnav}
-}
+};
 </script>
