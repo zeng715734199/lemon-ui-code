@@ -19,7 +19,9 @@
           </li>
         </ol>
       </aside>
-      <main>主内容</main>
+      <main>
+        <router-view/>
+      </main>
     </div>
   </div>
 </template>
@@ -31,7 +33,7 @@ export default {
   components: {Topnav},
   setup() {
     const asideVisible = inject<Ref<boolean>>('asideVisible');
-    return {asideVisible}
+    return {asideVisible};
   }
 };
 </script>
@@ -51,6 +53,7 @@ aside {
       padding: 4px 0;
     }
   }
+
   @media (max-width: 500px) {
     position: fixed;
     top: 0;
