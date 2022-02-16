@@ -1,6 +1,6 @@
 <template>
   <div>
-    <Switch/>
+    <Switch />
   </div>
 </template>
 <script>
