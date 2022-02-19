@@ -12,8 +12,8 @@
           <p>第二行字</p>
         </main>
         <footer>
-          <Button level="main">OK</Button>
-          <Button>Cancel</Button>
+          <Button level="main" @click="ok">OK</Button>
+          <Button @click="cancel">Cancel</Button>
         </footer>
       </div>
     </div>
@@ -32,6 +32,12 @@ export default {
     closeOnclickOverlay: {
       type: Boolean,
       default: true
+    },
+    ok: {
+      type: Function
+    },
+    cancel: {
+      type: Function
     }
   },
   components: {Button},
@@ -44,7 +50,16 @@ export default {
         close()
       }
     }
-    return {close, closeOnclickOverlay}
+    const ok = () => {
+      if(props.ok?.() !== false){
+        close()
+      }
+    }
+    const cancel = () => {
+      context.emit('cancel')
+      close()
+    }
+    return {close, closeOnclickOverlay, ok, cancel}
   }
 }
 </script>
