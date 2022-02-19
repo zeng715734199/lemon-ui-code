@@ -1,6 +1,6 @@
 <template>
   <template v-if="visible">
-    <div class="lemon-dialog-overlay"></div>
+    <div class="lemon-dialog-overlay" @click="closeOnclickOverlay"></div>
     <div class="lemon-dialog-wrapper">
       <div class="lemon-dialog">
         <header>
@@ -28,6 +28,10 @@ export default {
     visible: {
       type: Boolean,
       default: false
+    },
+    closeOnclickOverlay: {
+      type: Boolean,
+      default: true
     }
   },
   components: {Button},
@@ -35,7 +39,12 @@ export default {
     const close = () => {
       context.emit('update:visible', false)
     }
-    return {close}
+    const closeOnclickOverlay = () => {
+      if(props.closeOnclickOverlay){
+        close()
+      }
+    }
+    return {close, closeOnclickOverlay}
   }
 }
 </script>
