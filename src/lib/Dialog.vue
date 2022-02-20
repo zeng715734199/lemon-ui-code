@@ -1,21 +1,23 @@
 <template>
   <template v-if="visible">
-    <div class="lemon-dialog-overlay" @click="closeOnclickOverlay"></div>
-    <div class="lemon-dialog-wrapper">
-      <div class="lemon-dialog">
-        <header>
-          <slot name="title"/>
-          <span class="lemon-dialog-close" @click="close"></span>
-        </header>
-        <main>
-          <slot name="content"/>
-        </main>
-        <footer>
-          <Button level="main" @click="ok">OK</Button>
-          <Button @click="cancel">Cancel</Button>
-        </footer>
+    <Teleport to="body">
+      <div class="lemon-dialog-overlay" @click="closeOnclickOverlay"></div>
+      <div class="lemon-dialog-wrapper">
+        <div class="lemon-dialog">
+          <header>
+            <slot name="title"/>
+            <span class="lemon-dialog-close" @click="close"></span>
+          </header>
+          <main>
+            <slot name="content"/>
+          </main>
+          <footer>
+            <Button level="main" @click="ok">OK</Button>
+            <Button @click="cancel">Cancel</Button>
+          </footer>
+        </div>
       </div>
-    </div>
+    </Teleport>
   </template>
 </template>
 
