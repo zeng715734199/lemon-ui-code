@@ -4,11 +4,11 @@
     <div class="lemon-dialog-wrapper">
       <div class="lemon-dialog">
         <header>
-          {{title}}
+          <slot name="title"/>
           <span class="lemon-dialog-close" @click="close"></span>
         </header>
         <main>
-          <slot/>
+          <slot name="content"/>
         </main>
         <footer>
           <Button level="main" @click="ok">OK</Button>
@@ -24,10 +24,6 @@ import Button from './Button.vue'
 
 export default {
   props: {
-    title: {
-      type: String,
-      default: '提示'
-    },
     visible: {
       type: Boolean,
       default: false
@@ -49,12 +45,12 @@ export default {
       context.emit('update:visible', false)
     }
     const closeOnclickOverlay = () => {
-      if(props.closeOnclickOverlay){
+      if (props.closeOnclickOverlay) {
         close()
       }
     }
     const ok = () => {
-      if(props.ok?.() !== false){
+      if (props.ok?.() !== false) {
         close()
       }
     }
