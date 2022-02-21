@@ -3,9 +3,9 @@
   <h1>示例1</h1>
   <Button @click="toggle">toggle</Button>
   <Dialog v-model:visible="x" :closeOnclickOverlay="true" :ok="f1" :cancel="f2">
-   <template v-slot:title>
-     <strong>加粗的标题</strong>
-   </template>
+    <template v-slot:title>
+      <strong>加粗的标题</strong>
+    </template>
     <template v-slot:content>
       <strong>加粗的内容</strong>
     </template>
@@ -33,11 +33,11 @@ export default {
       openDialog({
         title: '标题',
         content: '内容',
-        ok: ()=>{return true},
-        cancel: ()=>{ return true},
+        ok: () => {return true;},
+        cancel: () => { return true;},
         closeOnclickOverlay: true
-      })
-    }
+      });
+    };
     return {x, toggle, f1, f2, showDialog};
   }
 };

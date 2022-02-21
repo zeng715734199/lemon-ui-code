@@ -21,8 +21,8 @@
   </template>
 </template>
 
-<script>
-import Button from './Button.vue'
+<script lang="ts">
+import Button from './Button.vue';
 
 export default {
   props: {
@@ -44,25 +44,25 @@ export default {
   components: {Button},
   setup(props, context) {
     const close = () => {
-      context.emit('update:visible', false)
-    }
+      context.emit('update:visible', false);
+    };
     const closeOnclickOverlay = () => {
       if (props.closeOnclickOverlay) {
-        close()
+        close();
       }
-    }
+    };
     const ok = () => {
       if (props.ok?.() !== false) {
-        close()
+        close();
       }
-    }
+    };
     const cancel = () => {
-      props.cancel?.()
-      close()
-    }
-    return {close, closeOnclickOverlay, ok, cancel}
+      props.cancel?.();
+      close();
+    };
+    return {close, closeOnclickOverlay, ok, cancel};
   }
-}
+};
 </script>
 
 <style lang="scss">
