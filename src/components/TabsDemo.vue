@@ -6,10 +6,10 @@
     <Tab title="导航2">内容2</Tab>
   </Tabs>
 </template>
-<script>
+<script lang="ts">
 import Tabs from '../lib/Tabs.vue'
 import Tab from '../lib/Tab.vue'
 export default {
-  components: {Tab, Tabs}
+  components: {Tab, Tabs},
 }
 </script>
