@@ -1,10 +1,10 @@
 <template>
   <div class="topnav">
-    <div class="logo">
+    <router-link to="/" class="logo">
       <svg class="icon">
         <use xlink:href="#icon-lemon"></use>
       </svg>
-    </div>
+    </router-link>
     <ul class="menu">
       <li>
         <router-link to="/doc">文档</router-link>
@@ -55,7 +55,6 @@ $color: #548e15;
       width: 32px;
     }
   }
-
   > .menu {
     display: flex;
     white-space: nowrap;
@@ -74,7 +73,6 @@ $color: #548e15;
     top: 50%;
     transform: translateY(-50%);
     display: none;
-    background: fade-out(black, 0.9);
   }
 
   @media (max-width: 500px) {
@@ -86,6 +84,15 @@ $color: #548e15;
     }
     > .toggleAside {
       display: inline-block;
+    }
+  }
+  @media (min-width: 500px) {
+    >.logo{
+      position: relative;
+      >svg{
+        position: absolute;
+        left: 38px;
+      }
     }
   }
 }
