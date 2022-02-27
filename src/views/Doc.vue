@@ -63,6 +63,7 @@ $aside-index: 10;
 
   > .content {
     flex-grow: 1;
+    padding-top: 60px;
     padding-left: 156px;
     @media (max-width: 500px) {
       padding-left: 0;
@@ -72,7 +73,7 @@ $aside-index: 10;
 
 .content {
   display: flex;
-  background: #f4e5c6;
+  background: #fefcec;
   > aside {
     flex-shrink: 0;
   }
@@ -85,7 +86,7 @@ $aside-index: 10;
 }
 
 aside {
-  background: #f4e5c6;
+  background: #fefcec;
   width: 156px;
   padding: 70px 0 16px 0;
   position: fixed;
@@ -98,6 +99,7 @@ aside {
   > h2 {
     margin-bottom: 4px;
     padding: 0 16px;
+    font-weight: bold;
   }
 
   > ol {
@@ -105,14 +107,17 @@ aside {
       padding: 10px 0;
       > a {
         display: block;
-        padding: 4px 16px;
+        padding: 16px;
         text-decoration: none;
+        border-radius: 20px;
+        background: white;
+        margin: 0 15px;
       }
 
       .router-link-active {
         font-weight: bold;
         color: #522e06;
-        background: #fe9925;
+        background: #fee125;
       }
     }
   }

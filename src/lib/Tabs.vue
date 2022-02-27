@@ -63,7 +63,7 @@ export default {
 </script>
 
 <style lang="scss">
-$blue: #40a9ff;
+$orange: #fe9925;
 $color: #333;
 $border-color: #d9d9d9;
 .lemon-tabs {
@@ -83,14 +83,14 @@ $border-color: #d9d9d9;
       }
 
       &.selected {
-        color: $blue;
+        color: $orange;
       }
     }
 
     &-indicator {
       position: absolute;
       height: 3px;
-      background: $blue;
+      background: $orange;
       left: 0;
       bottom: -1px;
       width: 100px;

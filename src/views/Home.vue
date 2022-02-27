@@ -9,6 +9,15 @@
           <a href="https://gitee.com/zeng715734199">GitHub</a>
           <router-link to="/doc">开始</router-link>
         </p>
+        <svg class="lemon">
+          <use xlink:href="#icon-lemon"></use>
+        </svg>
+        <svg class="lemon">
+          <use xlink:href="#icon-lemon"></use>
+        </svg>
+        <svg class="lemon">
+          <use xlink:href="#icon-lemon"></use>
+        </svg>
       </div>
     </div>
     <div class="features">
@@ -50,7 +59,7 @@ $yellow: #fee125;
 $border-radius: 5px;
 $color: #331b00;
 .topnavAndBanner {
-  background: linear-gradient(90deg, rgba(254,218,178,1) 0%, rgba(254,252,236,1) 100%);
+  background: linear-gradient(90deg, rgba(254, 218, 178, 1) 0%, rgba(254, 252, 236, 1) 100%);
   clip-path: ellipse(80% 60% at 50% 40%);
 }
 
@@ -108,12 +117,14 @@ $color: #331b00;
 }
 
 .banner {
+  position: relative;
   padding: 180px 0;
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
   color: $color;
+  overflow: hidden;
 
   > .actions {
     padding: 8px 0;
@@ -131,6 +142,43 @@ $color: #331b00;
         text-decoration: none;
       }
     }
+  }
+}
+
+.lemon {
+  height: 230px;
+  width: 230px;
+  position: absolute;
+  right: 0;
+  bottom: 4%;
+  z-index: -1;
+  animation: lemon-rotate infinite linear 5s;
+}
+
+.lemon + .lemon {
+  height: 180px;
+  width: 180px;
+  position: absolute;
+  left: -4%;
+  bottom: 5%;
+  animation: lemon-rotate infinite linear 5s;
+}
+
+.lemon + .lemon + .lemon {
+  width: 150px;
+  height: 150px;
+  position: absolute;
+  left: 60%;
+  top: 0;
+  animation: lemon-rotate infinite linear 5s;
+}
+
+@keyframes lemon-rotate {
+  from {
+    transform: none;
+  }
+  to{
+    transform: rotate(360deg);
   }
 }
 </style>

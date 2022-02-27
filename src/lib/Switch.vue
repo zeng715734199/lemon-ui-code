@@ -41,7 +41,7 @@ $h2: $h - 4px;
 
   }
   &.lemon-checked {
-    background: #1890ff;
+    background: #fe9925;
     > span {
       left: calc(100% - #{$h2} - 2px);
     }

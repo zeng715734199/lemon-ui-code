@@ -2,7 +2,7 @@
   <div class="topnav">
     <router-link to="/" class="logo">
       <svg class="icon">
-        <use xlink:href="#icon-lemon"></use>
+        <use xlink:href="#icon-lemon-t"></use>
       </svg>
     </router-link>
     <ul class="menu">
@@ -37,7 +37,7 @@ $color: #331b00;
 .topnav {
   display: flex;
   padding: 16px;
-  position: relative;
+  position: fixed;
   top: 0;
   left: 0;
   width: 100%;
@@ -96,9 +96,10 @@ $color: #331b00;
 
       > svg {
         position: absolute;
-        width: 45px;
-        height: 45px;
-        margin-top: -20px;
+        width: 64px;
+        height: 64px;
+        margin-top: -28px;
+        margin-left: 30px;
       }
     }
   }
