@@ -5,15 +5,23 @@
 <template>
   <div class="demo-component">
     <Button loading>Loading</Button>
-    <Button>加载完毕</Button>
+    <Button :loading="bool" @click="setLoading">click me!</Button>
   </div>
 </template>
 
 
 <script lang="ts">
 import Button from '../lib/Button.vue';
+import {ref} from 'vue';
 
 export default {
-  components: {Button}
+  components: {Button},
+  setup() {
+    const bool = ref(false);
+    const setLoading = () => {
+      bool.value = !bool.value;
+    };
+    return {setLoading, bool};
+  }
 };
 </script>

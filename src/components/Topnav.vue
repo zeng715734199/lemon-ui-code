@@ -41,11 +41,11 @@ $color: #548e15;
   top: 0;
   left: 0;
   width: 100%;
-  z-index: 10;
+  z-index: 20;
   justify-content: center;
   align-items: center;
   color: $color;
-
+  background: $color;
   > .logo {
     max-width: 6em;
     margin-right: auto;
@@ -73,6 +73,7 @@ $color: #548e15;
     top: 50%;
     transform: translateY(-50%);
     display: none;
+    z-index: 20;
   }
 
   @media (max-width: 500px) {
@@ -91,7 +92,9 @@ $color: #548e15;
       position: relative;
       >svg{
         position: absolute;
-        left: 38px;
+        width: 45px;
+        height: 45px;
+        margin-top: -20px;
       }
     }
   }
