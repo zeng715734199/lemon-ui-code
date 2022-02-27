@@ -46,11 +46,11 @@ export default {
 };
 </script>
 <style lang="scss" scoped>
-$green: #216f73;
+$yellow: #fee125;
 $border-radius: 5px;
-$color: #548e15;
+$color: #331b00;
 .topnavAndBanner {
-  background: linear-gradient(315deg, rgba(176, 236, 211, 1) 0%, rgba(251, 237, 149, 1) 100%);
+  background: linear-gradient(90deg, rgba(254,218,178,1) 0%, rgba(254,252,236,1) 100%);
   clip-path: ellipse(80% 60% at 50% 40%);
 }
 
@@ -108,7 +108,7 @@ $color: #548e15;
 }
 
 .banner {
-  padding: 100px 0;
+  padding: 180px 0;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -120,8 +120,9 @@ $color: #548e15;
 
     a {
       margin: 0 8px;
-      background: $green;
-      color: white;
+      background: $yellow;
+      color: $color;
+      font-weight: bold;
       display: inline-block;
       padding: 8px 24px;
       border-radius: $border-radius;

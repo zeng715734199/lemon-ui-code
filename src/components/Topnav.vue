@@ -33,11 +33,11 @@ export default {
 };
 </script>
 <style lang="scss" scoped>
-$color: #548e15;
+$color: #331b00;
 .topnav {
   display: flex;
   padding: 16px;
-  position: fixed;
+  position: relative;
   top: 0;
   left: 0;
   width: 100%;
@@ -45,7 +45,9 @@ $color: #548e15;
   justify-content: center;
   align-items: center;
   color: $color;
-  background: $color;
+  font-weight: bold;
+  font-size: 20px;
+
   > .logo {
     max-width: 6em;
     margin-right: auto;
@@ -55,6 +57,7 @@ $color: #548e15;
       width: 32px;
     }
   }
+
   > .menu {
     display: flex;
     white-space: nowrap;
@@ -88,9 +91,10 @@ $color: #548e15;
     }
   }
   @media (min-width: 500px) {
-    >.logo{
+    > .logo {
       position: relative;
-      >svg{
+
+      > svg {
         position: absolute;
         width: 45px;
         height: 45px;
