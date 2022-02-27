@@ -16,8 +16,6 @@
 <script lang="ts">
 import Button from '../lib/Button.vue';
 import {computed, ref} from 'vue';
-import Switch1Demo from './Switch1.demo.vue';
-import Switch2Demo from './Switch2.demo.vue';
 import 'prismjs';
 import 'prismjs/themes/prism.css';
 
@@ -33,12 +31,15 @@ export default {
   },
   setup(props) {
     const html = computed(() => {
+      //@ts-ignore
       return Prism.highlight(props.component.__sourceCode, Prism.languages.html, 'html');
     });
-    const codeVisible = ref(false)
-    const toggleCode = () => { codeVisible.value = !codeVisible.value}
+    const codeVisible = ref(false);
+    const toggleCode = () => { codeVisible.value = !codeVisible.value;};
     return {
-      Switch1Demo, Switch2Demo, html, codeVisible,toggleCode
+      html,
+      codeVisible,
+      toggleCode
     };
   }
 };
