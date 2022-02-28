@@ -3,12 +3,15 @@
     <div class="topnavAndBanner">
       <Topnav/>
       <div class="banner">
-        <h1>柠檬UI</h1>
-        <h2>一个菜鸟写的 UI 框架</h2>
+        <h1 style="font-weight: bold; font-size: 64px">Lemon UI</h1>
+        <h2>一个基于Vue 3.0 的 UI 框架</h2>
         <p class="actions">
           <a href="https://gitee.com/zeng715734199">GitHub</a>
           <router-link to="/doc">开始</router-link>
         </p>
+        <svg class="lemon">
+          <use xlink:href="#icon-lemon"></use>
+        </svg>
         <svg class="lemon">
           <use xlink:href="#icon-lemon"></use>
         </svg>
@@ -118,7 +121,7 @@ $color: #331b00;
 
 .banner {
   position: relative;
-  padding: 180px 0;
+  padding: 150px 0;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -152,7 +155,7 @@ $color: #331b00;
   right: 0;
   bottom: 4%;
   z-index: -1;
-  animation: lemon-rotate infinite linear 5s;
+  animation: lemon-rotate infinite linear 8s;
 }
 
 .lemon + .lemon {
@@ -161,7 +164,7 @@ $color: #331b00;
   position: absolute;
   left: -4%;
   bottom: 5%;
-  animation: lemon-rotate infinite linear 5s;
+  animation: lemon-rotate infinite linear 8s;
 }
 
 .lemon + .lemon + .lemon {
@@ -170,7 +173,16 @@ $color: #331b00;
   position: absolute;
   left: 60%;
   top: 0;
-  animation: lemon-rotate infinite linear 5s;
+  animation: lemon-rotate infinite linear 8s;
+}
+
+.lemon + .lemon + .lemon + .lemon {
+  height: 200px;
+  width: 200px;
+  position: absolute;
+  left: 40%;
+  top: 70%;
+  animation: lemon-rotate infinite linear 8s;
 }
 
 @keyframes lemon-rotate {
@@ -179,6 +191,11 @@ $color: #331b00;
   }
   to{
     transform: rotate(360deg);
+  }
+}
+@media (max-width: 500px) {
+  .lemon + .lemon + .lemon + .lemon {
+    display: none;
   }
 }
 </style>
