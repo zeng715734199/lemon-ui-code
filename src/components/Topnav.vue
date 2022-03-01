@@ -53,8 +53,8 @@ $color: #331b00;
     margin-right: auto;
 
     > svg {
-      height: 32px;
-      width: 32px;
+      height: 38px;
+      width: 38px;
     }
   }
 
