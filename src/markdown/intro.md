@@ -8,7 +8,7 @@ Lemon-UI 是一款基于 Vue 3 和 TypeScript 的 UI 组件库。
 如果想学习从设计到实现整个UI库的环节，那么这个库还是值得一看的。
 
 
-源代码放在了 <https://github.com/zeng715734199/Lemon-sourceCode>，历史提交信息非常规范，可以按提交的顺序逐个查看。
+源代码放在了 <https://github.com/zeng715734199/lemon-ui-code>，历史提交信息非常规范，可以按提交的顺序逐个查看。
 
 也可以直接查看每个组件的源代码和示例，运行方法见 ***README.md***。 
 
