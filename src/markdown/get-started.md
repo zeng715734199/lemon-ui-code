@@ -3,7 +3,7 @@
 
 然后在你的代码中写入下面的代码：
 
-`import {Button, Tabs, Tab, Switch, Dialog, openDialog} from "lemon-ui"`
+`import {Button, Tabs, Tab, Switch, Dialog, openDialog} from "lemon-ui-1"`
 
 就可以使用我提供的组件了。
 
@@ -16,7 +16,7 @@
   </div>
 </template>
 <script>
-import {Button, Tabs, Tab, Switch, Dialog, openDialog} from "lemon-ui"
+import {Button, Tabs, Tab, Switch, Dialog, openDialog} from "lemon-ui-1"
 export default {
   components: {Button, Tabs, Tab, Switch, Dialog, openDialog}
 }

@@ -6,7 +6,7 @@
         <h1 style="font-weight: bold; font-size: 64px">Lemon UI</h1>
         <h2>一个基于Vue 3.0 的 UI 框架</h2>
         <p class="actions">
-          <a href="https://gitee.com/zeng715734199">GitHub</a>
+          <a href="https://github.com/zeng715734199">GitHub</a>
           <router-link to="/doc">开始</router-link>
         </p>
         <svg class="lemon">
